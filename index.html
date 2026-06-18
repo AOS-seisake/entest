@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AOS 英会話試験</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Noto+Sans+JP:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="header-brand">
+    <div class="header-badge">
+      <img src="img/logo.png" style="width:38px;height:38px;object-fit:contain;">
+    </div>
+    <div class="brand-text">
+      <span class="brand-main">AOS EN TEST</span>
+      <span class="brand-sub">AOS 英会話試験</span>
+    </div>
+  </div>
+</header>
+
+<!-- ════════════ PAGE: 問題一覧（社内確認用・通常は非表示） ════════════ -->
+<div class="page" id="page-list" style="display:none;">
+  <main>
+    <div class="section-header">
+      <h1 class="section-title">問題一覧</h1>
+      <div style="display:flex; flex-direction:column; align-items:flex-end; gap:4px;">
+        <span class="section-meta">Listening 12問 + Reading 3問</span>
+        <span class="section-meta">※ 試験では聴解2問・読解3問がランダムに出題されます</span>
+      </div>
+    </div>
+    <div id="list-content"></div>
+  </main>
+</div>
+
+<!-- ════════════ PAGE: 試験 ════════════ -->
+<div class="page active" id="page-exam">
+  <main>
+    <div class="section-header">
+      <h1 class="section-title">今回の出題</h1>
+    </div>
+
+    <div class="student-info-wrap" id="student-info-wrap">
+      <div class="exam-notice">
+        <div class="exam-notice-title">試験を始める前に — 注意事項</div>
+        <ol class="exam-notice-list">
+          <li>全部で5問あります。写真を見て答える聴解（口語）問題が2問、文章を読んで答える読解問題が3問です。</li>
+          <li>試験時間は5分間です。氏名を入力して「試験開始」を押した瞬間からカウントダウンが始まります。残り1分になるとタイマーの色が変わって知らせます。5分経過すると自動的に採点され、試験は終了します。</li>
+          <li>聴解問題では、写真の右側にある再生ボタンを押すと音声が流れます。音声は最大2回まで再生できます。</li>
+          <li>「Hint」ボタンを押すと日本語のヒントが表示されます。回答の参考にしてください。</li>
+          <li>写真の下にある録音ボタンを1回押すと録音が始まり、もう1回押すと録音が終了して自動的に送信されます。録音は最長30秒で、この時間も試験時間（5分）に含まれます。考える時間も録音時間に入るため、落ち着いて、できるだけ早く簡潔に答えてください。録音は1回だけ録り直しができます。</li>
+          <li>読解問題は、選択肢の中から正しいと思う答えをクリックしてください。</li>
+          <li>すべての問題に早く答え終わった場合は、「採点する」ボタンを押すことで試験を終了できます。</li>
+          <li>マイクの使用を許可する確認が表示された場合は、「許可」を選んでください。試験中はページの更新（リロード）や、ブラウザの「戻る」操作を行わないでください。試験が無効になる場合があります。</li>
+        </ol>
+      </div>
+
+      <label for="student-name">受験者氏名を入力してください：</label>
+      <input type="text" id="student-name" placeholder="例：警備 太郎">
+      <button class="start-exam-btn" id="start-exam-btn" onclick="startExam()">試験開始 →</button>
+      <div class="start-warning" id="start-warning"></div>
+    </div>
+
+    <div class="timer-bar" id="timer-bar" style="display:none;">
+      <span class="timer-label">残り時間</span>
+      <span class="timer-clock" id="timer-clock">05:00</span>
+    </div>
+
+    <div id="exam-content"></div>
+  </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
