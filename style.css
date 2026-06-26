@@ -964,14 +964,37 @@ main {
     align-items: flex-start !important;
   }
 
+  /* カード本体をgridに変更
+     行1: 画像（card-left先頭）
+     行2: 音声ボタン＋Hintボタン（card-right）
+     行3: hintエリア（card-left中段）
+     行4: 録音エリア（card-left末尾）
+  */
   .exam-card-body {
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  .exam-card-left {
+    display: contents; /* 子要素をgridの直接の子として扱う */
+  }
+  .exam-img-wrap {
+    order: 1;
   }
   .exam-card-right {
+    order: 2;
     flex-direction: row;
     width: 100%;
     justify-content: flex-start;
     gap: 1rem;
+    display: flex;
+    padding: 0 0 0.5rem 0;
+  }
+  .exam-hint-area {
+    order: 3;
+  }
+  .record-wrap {
+    order: 4;
   }
   .hint-toggle-btn {
     writing-mode: horizontal-tb;
@@ -1054,9 +1077,12 @@ main {
   .r-exam-btn { font-size: 15px; padding: 9px 12px; }
 
   .reading-submit-btn {
-    width: 100%;
+    width: auto;
+    min-width: 220px;
     font-size: 15px;
-    padding: 12px 0;
+    padding: 12px 2rem;
+    display: block;
+    margin: 0 auto;
   }
 
   .section-divider-text { font-size: 19px; }
