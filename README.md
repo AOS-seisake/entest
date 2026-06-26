@@ -2,8 +2,6 @@
 date: 2026-06-26
 ---
 
-[AOS EN Test 3.0](https://aos-seisake.github.io/entest/)
-
-警備員向けの英語試験サイトです。
+[AOS EN Test 3.0](https://aos-seisake.github.io/entest/) は**警備員向けの英語試験(L&R)サイト**です。
 
 イベントで想定されるさまざまなシチュエーションについて音声で出題され、警備員が内容を聞いたうえで、自分なりに英語で回答する形式となっています。
