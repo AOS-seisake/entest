@@ -1061,7 +1061,7 @@ main {
   .audio-btn .tip { display: none !important; }
 
   /* 録音エリア：ボタンが画面幅に収まるよう調整 */
-  .record-wrap { padding: 0.8rem 0.85rem; }
+  .record-wrap { padding: 0.5rem 0.85rem; }
   .record-controls { gap: 0.6rem; }
   .record-btn, .rerecord-btn {
     font-size: 14px;
