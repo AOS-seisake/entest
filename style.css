@@ -988,7 +988,7 @@ main {
     justify-content: flex-start;
     gap: 1rem;
     display: flex;
-    padding: 0 0 0.5rem 0;
+    padding: 0 0 0.2rem 0;
   }
   .exam-hint-area {
     order: 3;
