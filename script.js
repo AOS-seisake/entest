@@ -1,4 +1,4 @@
-const SUBMIT_URL = "https://script.google.com/macros/s/AKfycbyXHx-hnCHU3vy_ST3r6Im9-mKHrnCN0mpVBlkU7CuqEnRo13Ui_DJ1-mUyIcsA6NM/exec";
+const SUBMIT_URL = "https://script.google.com/macros/s/AKfycbzIcxSlCrAcYtulfZySXc7te8zRwtDNPy-cu04SIzpMSrusgkZaoeWw6NRTOApzVOUW8Q/exec";
 
 /* ══════════════════════════════════════════
    EXAM CONFIG
